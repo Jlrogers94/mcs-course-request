@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MCS Course Request</title>
+        <link rel="stylesheet" href="./resources/style.css">
+        
+
+    </head>
+    <body>
+        <header>
+            <div class="top-nav">
+                <h2>MCS Registration Tool</h2>
+                <div class="nav-buttons">
+                    <li>
+                        <ul><a href="#">6th</a></ul>
+                        <ul><a href="#">7th</a></ul>
+                        <ul><a href="#">8th</a></ul>
+                    </li>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="side-nav">
+                <h3>Required</h3>
+                <button class="accordion">ELA</button>
+                <div class="panel">
+                    <button id="ela-reg-six" onclick="getInfo(elaRegSix)">Language Arts 6</button>
+                    <button id="ela-hon-six" onclick="getInfo(elaHonSix)">Honors Language Arts 6</button>
+                </div>
+                <button class="accordion">Math</button>
+                <div class="panel">
+                    <button id="math-reg-six" onclick="getInfo(mathRegSix)">Math 6</button>
+                    <button id="math-hon-six" onclick="getInfo(mathHonSix)">Accelerated Math 6</button>
+                </div>
+                <button class="accordion">PE</button>
+                <div class="panel">
+                    <button id="indoor-pe" onclick="getInfo(indoorPE)">Indoor PE</button>
+                    <button id="outdoor-pe" onclick="getInfo(outdoorPE)">Outdoor PE</button>
+                </div>
+                <button class="accordion">Science</button>
+                <div class="panel">
+                    <button id="earth-space-six" onclick="getInfo(earthSpaceScienceSix)">Earth and Space Science 6</button>
+                </div>
+                <button class="accordion">Social Studies</button>
+                <div class="panel">
+                    <button id="social-studies-six" onclick="getInfo(socialStudiesSix)">Social Studies 6</button>
+                </div>
+                <button class="accordion">World Language</button>
+                <div class="panel">
+                    <button id="french-survey-a" onclick="getInfo(frenchA)">French Survey A</button>
+                    <button id="german-survey-a" onclick="getInfo(germanA)">German Survey A</button>
+                    <button id="latin-survey-a" onclick="getInfo(latinA)">Latin Survey A</button>
+                    <button id="mandarin-survey-a" onclick="getInfo(mandarinA)">Mandarin Survey A</button>
+                </div>
+                <h3>Electives</h3>
+                <script src="./resources/script.js"></script>
+            </div>
+            <div class="page-container">
+                <div class="container">
+                    <div class="class-info">
+                        <div>
+                            <h3 id="class-title">Select a course to learn more about it!</h3>
+                            <div class="extra-info">
+                                <div>
+                                    <p>Grades:</p>
+                                    <p id="class-grade"></p>
+                                </div>
+                                <div>
+                                    <p>Length:</p>
+                                    <p id="class-length"></p>
+                                </div>
+                                <div>
+                                    <p>Credits:</p>
+                                    <p id="class-credit"></p>
+                                </div>
+                                <div>
+                                    <p>Prerequisites:</p>
+                                    <p id="class-prereq"></p>
+                                </div>
+                                <div>
+                                    <p>Course Fee:</p>
+                                    <p id="class-fee"></p>
+                                </div>
+                            </div>
+                            <p id="class-overview"></p>
+                        </div>
+                        
+                    </div>
+                    <div class="course-buttons">
+                        <button id="add-alternate">Add as Alternate</button>
+                        <button id="add-course" onclick="addCourse()">Add Course to Schedule</button>
+                        <button id="remove-course" onclick="removeCourse()">Remove Course</button>
+                    </div>
+                    
+                    <div class="request-grid">
+                        <div id="ela">
+                            <h3>English Language Arts</h3>
+                            <br>
+                            <p id="ela-choice">Select a Course</p>
+                        </div>
+                        <div id="math">
+                            <h3>Math</h3>
+                            <br>
+                            <p id="math-choice">Select a Course</p>
+                        </div>
+                        <div id ="science">
+                            <h3>Science</h3>
+                            <br>
+                            <p id="science-choice">Select a Course</p>
+                        </div>
+                        <div id="socialstudies">
+                            <h3>Social Studies</h3>
+                            <br>
+                            <p id="socialstudies-choice">Select a Course</p>
+                        </div>
+                        <div id="pe">
+                            <h3>P.E.</h3>
+                            <br>
+                            <p id="pe-choice">Select a Course</p>
+                        </div>
+                        <div id="worldlanguage">
+                            <h3>World Language</h3>
+                            <br>
+                            <p id="worldlanguage-choice">Select a Course</p>
+                        </div>
+                        <div class="elective-one">
+                            <h3>Elective</h3>
+                            <br>
+                            <p id="elective-one">Select a Course</p>
+                        </div>
+                        <div class="elective-two"></div>
+                        <div class="elective-three"></div>
+                        <div class="elective-four"></div>
+                        <div class="elective-five"></div>
+                        <div class="elective-six"></div>
+                    </div>
+                
+                </div>
+            </div>
+        </main>
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
