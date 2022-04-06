@@ -91,37 +91,36 @@
                     <div class="course-buttons">
                         <button id="add-alternate">Add as Alternate</button>
                         <button id="add-course" onclick="addCourse()">Add Course to Schedule</button>
-                        <button id="remove-course" onclick="removeCourse()">Remove Course</button>
                     </div>
                     
                     <div class="request-grid">
                         <div id="ela">
-                            <h3>English Language Arts</h3>
+                            <h3>English Language Arts<a href="javascript:void(0)" id="ela-remove" class="remove-button" onclick="removeCourse('ela')">&times;</a></h3>
                             <br>
                             <p id="ela-choice">Select a Course</p>
                         </div>
                         <div id="math">
-                            <h3>Math</h3>
+                            <h3>Math<a href="javascript:void(0)" id="math-remove" class="remove-button" onclick="removeCourse('math')">&times;</a></h3>
                             <br>
                             <p id="math-choice">Select a Course</p>
                         </div>
                         <div id ="science">
-                            <h3>Science</h3>
+                            <h3>Science<a href="javascript:void(0)" id="science-remove" class="remove-button" onclick="removeCourse('science')">&times;</a></h3>
                             <br>
                             <p id="science-choice">Select a Course</p>
                         </div>
                         <div id="socialstudies">
-                            <h3>Social Studies</h3>
+                            <h3>Social Studies<a href="javascript:void(0)" id="socialstudies-remove" class="remove-button" onclick="removeCourse('socialstudies')">&times;</a></h3>
                             <br>
                             <p id="socialstudies-choice">Select a Course</p>
                         </div>
                         <div id="pe">
-                            <h3>P.E.</h3>
+                            <h3>P.E.<a href="javascript:void(0)" id="pe-remove" class="remove-button" onclick="removeCourse('pe')">&times;</a></h3>
                             <br>
                             <p id="pe-choice">Select a Course</p>
                         </div>
                         <div id="worldlanguage">
-                            <h3>World Language</h3>
+                            <h3>World Language<a href="javascript:void(0)" id="worldlanguage-remove" class="remove-button" onclick="removeCourse('worldlanguage')">&times;</a></h3>
                             <br>
                             <p id="worldlanguage-choice">Select a Course</p>
                         </div>
@@ -136,6 +135,8 @@
                         <div class="elective-five"></div>
                         <div class="elective-six"></div>
                     </div>
+                    <p id="class-list">Classes</p>
+                    <p id="credit-hours">Credits</p>
                 
                 </div>
             </div>

@@ -159,6 +159,15 @@ main {
     align-items: center;
     flex-wrap: wrap;
 }
+.remove-button{
+    float: right;
+    padding-right: 2px;
+    text-decoration: none;
+    color: #666;
+    visibility: hidden;
+    
+
+}
 #math, #ela, #science, #socialstudies,#worldlanguage,#pe,
 .elective-one,.elective-two,.elective-three,.elective-four,
 .elective-five,.elective-six {

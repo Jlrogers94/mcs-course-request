@@ -20,7 +20,7 @@ let elaRegSix = {
   _subject: 'ela',
   _name: 'Language Arts 6',
   _length: 'Year Long',
-  _credit: '4',
+  _credit: 4,
   _fee: 'None',
   _grade: '6',
   _prereq: 'None',
@@ -35,7 +35,7 @@ let elaHonSix = {
   _subject: 'ela',
   _name: "Honors Language Arts 6",
   _length: 'Year Long',
-  _credit: '4',
+  _credit: 4,
   _fee: 'None',
   _grade: '6',
   _prereq: 'None',
@@ -52,7 +52,7 @@ let mathRegSix = {
   _subject: 'math',
   _name: "Math 6",
   _length: 'Year Long',
-  _credit: '4',
+  _credit: 4,
   _fee: 'None',
   _grade: '6',
   _prereq: 'None',
@@ -65,7 +65,7 @@ let mathHonSix = {
   _subject: 'math',
   _name: "Accelerated Math 6",
   _length: 'Year Long',
-  _credit: '4',
+  _credit: 4,
   _fee: 'None',
   _grade: '6',
   _prereq: 'None',
@@ -77,7 +77,7 @@ let earthSpaceScienceSix = {
   _subject: 'science',
   _name: "Earth and Space Science",
   _length: 'Semester Long',
-  _credit: '2',
+  _credit: 2,
   _fee: 'None',
   _grade: '6',
   _prereq: 'None',
@@ -91,7 +91,7 @@ let socialStudiesSix = {
   _subject: 'socialstudies',
   _name: "Social Studies 6",
   _length: 'Semester Long',
-  _credit: '2',
+  _credit: 2,
   _fee: 'None',
   _grade: '6',
   _prereq: 'None',
@@ -106,7 +106,7 @@ let indoorPE = {
   _subject:'pe',
   _name: "Indoor Rec and Team Sports",
   _length: '9-Weeks',
-  _credit: '1',
+  _credit: 1,
   _fee: 'None',
   _grade: '6, 7 and 8',
   _prereq: 'None',
@@ -120,7 +120,7 @@ let outdoorPE = {
   _subject: 'pe',
   _name: "Outdoor Rec and Team Sports",
   _length: '9-Weeks',
-  _credit: '1',
+  _credit: 1,
   _fee: 'None',
   _grade: '6, 7 and 8',
   _prereq: 'None',
@@ -134,7 +134,7 @@ let frenchA = {
   _subject: 'worldlanguage',
   _name: "French Survey A",
   _length: '9-Weeks',
-  _credit: '1',
+  _credit: 1,
   _fee: '$10',
   _grade: '6 and 7',
   _prereq: 'None',
@@ -147,7 +147,7 @@ let germanA = {
   _subject: 'worldlanguage',
   _name: "German Survey A",
   _length: '9-Weeks',
-  _credit: '1',
+  _credit: 1,
   _fee: '$10',
   _grade: '6 and 7',
   _prereq: 'None',
@@ -160,7 +160,7 @@ let latinA = {
   _subject: 'worldlanguage',
   _name: "Latin Survey A",
   _length: '9-Weeks',
-  _credit: '1',
+  _credit: 1,
   _fee: '$10',
   _grade: '6 and 7',
   _prereq: 'None',
@@ -173,7 +173,7 @@ let mandarinA = {
   _subject: 'worldlanguage',
   _name: "Mandarin Survey A",
   _length: '9-Weeks',
-  _credit: '1',
+  _credit: 1,
   _fee: '$10',
   _grade: '6 and 7',
   _prereq: 'None',
@@ -183,6 +183,9 @@ let mandarinA = {
   class is required for all sixth grade students. `
 }
 var classGetter = []; 
+let subjects = [];
+let classList = [];
+var credits = 0;
 
 function getInfo(id) {
   var grade = document.getElementById("class-grade");
@@ -199,23 +202,43 @@ function getInfo(id) {
   credit.innerText = id._credit;
   prereq.innerText = id._prereq;
   fee.innerText = id._fee;
-  classGetter = [id._subject, id._name];
+  classGetter = [id._subject, id._name, id._credit, id];
+}
+
+  
+function addCourse(){
+  var sure = true;
+  for(var i = 0; i < classList.length; i++){
+    if(classList[i] === document.getElementById(`${classGetter[0]}-choice`).innerText ){
+      alert("This class is already in your schedule. Please select another.");
+      sure = false;
+  }
+}
+  if(sure === true){
+    document.getElementById(`${classGetter[0]}-choice`).innerText = classGetter[1];
+    document.getElementById(classGetter[0]).style.backgroundColor = "lightgreen";
+    document.getElementById(`${classGetter[0]}-remove`).style.visibility = "visible";
+    classList.push(classGetter[1]);
+    subjects.push(classGetter[3]);
+    credits += classGetter[2]
+    document.getElementById("class-list").innerHTML = classList;
+    document.getElementById("credit-hours").innerHTML = credits;
+  }
 }
   
-  function addCourse(){
-      document.getElementById(`${classGetter[0]}-choice`).innerText = classGetter[1];
-      document.getElementById(classGetter[0]).style.backgroundColor = "lightgreen";
+function removeCourse(id) {
+  for(var i = 0; i < classList.length; i++){
+    if(classList[i] === document.getElementById(`${id}-choice`).innerText ){
+      credits -= subjects[i]._credit;
+      classList.splice(i,1);
+      subjects.splice(i,1);
     }
-  
-  function removeCourse() {
-    document.getElementById(`${classGetter[0]}-choice`).innerText = "Select a Course";
-    document.getElementById(classGetter[0]).style.backgroundColor = null;
+  }
+  document.getElementById(`${id}-choice`).innerText = "Select a Course";
+  document.getElementById(id).style.backgroundColor = null;
+  document.getElementById(`${id}-remove`).style.visibility = "hidden";
+  document.getElementById("class-list").innerHTML = classList;
+  document.getElementById("credit-hours").innerHTML = credits;
 
-  
-  
-      
-    
-
-  
   
 }
