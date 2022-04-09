@@ -46,6 +46,46 @@
                     <p class="some-button worldlanguage-course" onclick="getInfo(latinA)"><a>Survey Latin A</a></p>
                     <p class="some-button worldlanguage-course" onclick="getInfo(mandarinA)"><a>Survey Mandarin A</a></p>
                 </div> 
+                <div id="elective-core" class="course">
+                    <h3>Academic Teams</h3>
+                    <p class="some-button elective-course" onclick="getInfo(compChess)"><a>Competition Chess</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(greenpowerRacing)"><a>Greenpower Racing</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(scholarsBowl)"><a>Scholars Bowl I</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(scienceOlympiad)"><a>Science Olympiad</a></p>
+                    <h3>CTE and STEM Courses</h3>
+                    <p class="some-button elective-course" onclick="getInfo(csim)"><a>Computer Science for Innovators and Makers</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(designModeling)"><a>Design and Modeling</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(digPutTools)"><a>Digital Publishing Tools</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(stem)"><a>S.T.E.M.</a></p>
+                    <h3>Fine Arts Courses</h3>
+                    <p class="some-button elective-course" onclick="getInfo(introVisArts)"><a>Introduction to Visual Arts</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(beginningBand)"><a>Beginning Band</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(beginningChorus)"><a>Beginning Chorus</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(advancedChorus)"><a>Advanced Chorus</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(beginningTheatre)"><a>Beginning Theatre</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(advancedTheatre)"><a>Advanced Theatre</a></p>
+                    <h3>General Electives</h3>
+                    <p class="some-button elective-course" onclick="getInfo(digCom)"><a>Digital Communications</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(innovativeExplorations)"><a>Innovative Explorations</a></p>
+                    <h3>Language Arts Courses</h3>
+                    <p class="some-button elective-course" onclick="getInfo(compWorkshop)"><a>Composition Workshop</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(creativeWritingI)"><a>Creative Writing I</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(introPubSpeaking)"><a>Introduction to Public Speaking</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(speechDebate)"><a>Speech and Debate</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(readingLab)"><a>Reading Lab</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(yearbook)"><a>Yearbook</a></p>
+                    <h3>Math Courses</h3>
+                    <p class="some-button elective-course" onclick="getInfo(mathMeetsArt)"><a>Math Meets Art</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(mathLab)"><a>Math Lab</a></p>
+                    <h3>PE Courses</h3>
+                    <p class="some-button elective-course" onclick="getInfo(indoorPE)"><a>Indoor PE</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(outdoorPE)"><a>Outdoor PE</a></p>
+                    <h3>World Language Courses</h3>
+                    <p class="some-button elective-course" onclick="getInfo(frenchA)"><a>Survey French A</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(germanA)"><a>Survey German A</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(latinA)"><a>Survey Latin A</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(mandarinA)"><a>Survey Mandarin A</a></p>
+                </div> 
                 <!--
                 <h3>Required</h3>
                 <button class="accordion">ELA</button>
@@ -156,7 +196,7 @@
                             <br>
                             <p id="worldlanguage-choice">Select a Course</p>
                         </div>
-                        <div class="elective-one" class="grid-choice">
+                        <div id="elective" class="elective-one" class="grid-choice" onclick="openTab(this.id)">
                             <h3>Elective</h3>
                             <br>
                             <p id="elective-one">Select a Course</p>

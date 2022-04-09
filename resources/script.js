@@ -248,7 +248,7 @@ function removeCourse(id) {
 }
 
 var subjectChosen;
-var allSubjects = ['ela', 'math','pe','science','socialstudies','worldlanguage']
+var allSubjects = ['ela', 'elective', 'math','pe','science','socialstudies','worldlanguage']
 function openTab(subject){
   subjectChosen = subject;
   for(let i = 0; i < allSubjects.length; i++){
