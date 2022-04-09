@@ -16,6 +16,12 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+function openNav() {
+  document.getElementsByClassName("side-nav").style.width = "15%";
+  document.getElementsByClassName("page-container").style.marginLeft = "85%";
+}
+
 let elaRegSix = {
   _subject: 'ela',
   _name: 'Language Arts 6',
@@ -239,6 +245,19 @@ function removeCourse(id) {
   document.getElementById(`${id}-remove`).style.visibility = "hidden";
   document.getElementById("class-list").innerHTML = classList;
   document.getElementById("credit-hours").innerHTML = credits;
+}
 
+var subjectChosen;
+var allSubjects = ['ela', 'math','pe','science','socialstudies','worldlanguage']
+function openTab(subject){
+  subjectChosen = subject;
+  for(let i = 0; i < allSubjects.length; i++){
+    if(subjectChosen !== allSubjects[i]){
+      document.getElementById(`${allSubjects[i]}-core`).style.display = "none";
+    } else {
+      document.getElementById(`${allSubjects[i]}-core`).style.display = "block";
+    }
+  }
+  
   
 }

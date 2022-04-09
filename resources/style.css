@@ -11,6 +11,7 @@ header {
     background-color: #29367a;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid black;
 }
 main {
     height: 90%;
@@ -26,29 +27,34 @@ main {
     align-items: center;
     color: white;
 }
-.nav-buttons li {
-    display: inline-flex;
-}
 
-.nav-buttons li a {
+.some-button {
     text-decoration: none;
     color: white;
     border: 1px solid black;
-    padding: 8px 20px;
+    padding: 5px 20px;
     background-color: #9a1c21;
-    border-radius: 5px;
     font-weight: 600;
+    text-align: center;
+}
+.course h3{
+    background-color: black;
 }
 
-.nav-buttons li a:hover{
-    background-color: #666;
-}
 .side-nav {
     width: 15%;
     height: 100%;
     background-color: #29367a;
     border-right: 1px solid black;
     overflow-y: auto;
+}
+
+.some-button{
+    color: white;
+}
+.some-button:hover{
+    background-color: lightgray;
+    cursor: pointer;
 }
 
 .side-nav h3 {
@@ -59,41 +65,6 @@ main {
     border-top: 2px solid black;
 
     
-}
-.accordion {
-    background-color: #29367a;
-    color: white;
-    cursor: pointer;
-    padding: 5px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    text-align: center;
-  }
-
-.active, .accordion:hover {
-    background-color: #333;
-  }
-.panel {
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    width: 100%;
-}
-
-.panel button:hover{
-    background-color: lightgray;
-    cursor: pointer;
-}
-
-.panel button {
-    background-color: white;
-    padding: 5px 0px;
-    color: black;
-    text-decoration: none;
-    width: 100%;
 }
 
 .page-container{
@@ -133,12 +104,16 @@ main {
 }
 .course-buttons {
     margin-bottom:2% ;
-    width: 90%;
+    width: 25%;
     display: inline-flex;
     justify-content: center;
+    flex-direction: column;
 }
 .course-buttons button{
     margin-right: 10px;
+}
+#add-alternate{
+    visibility: hidden;
 }
 
 .container {
@@ -158,6 +133,9 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+.request-grid:hover{
+    cursor: pointer;
 }
 .remove-button{
     float: right;
@@ -202,3 +180,14 @@ main {
     text-align: center;
     overflow-y: scroll;
 }
+
+.course{
+  display: none;
+}
+#ela:hover, #math:hover, #pe:hover, #science:hover,#socialstudies:hover,#worldlanguage:hover{
+    background-color: #666;
+}
+#ela:active{
+    background-color: lightgray;
+}
+

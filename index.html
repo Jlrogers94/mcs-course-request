@@ -10,19 +10,43 @@
     <body>
         <header>
             <div class="top-nav">
-                <h2>MCS Registration Tool</h2>
-                <div class="nav-buttons">
-                    <li>
-                        <ul><a href="#">6th</a></ul>
-                        <ul><a href="#">7th</a></ul>
-                        <ul><a href="#">8th</a></ul>
-                    </li>
-
+                <h2>MCS 6th Grade Registration Tool</h2>
                 </div>
             </div>
         </header>
         <main>
             <div class="side-nav">
+                <div id="ela-core" class="course">
+                    <h3>ELA Courses</h3>
+                    <p class="some-button ela-course" onclick="getInfo(elaRegSix)"><a>Language Arts 6</a></p>
+                    <p class="some-button ela-course" onclick="getInfo(elaHonSix)"><a >Honors Language Arts 6</a></p>
+                </div>
+                <div id="math-core" class="course">
+                    <h3>Math Courses</h3>
+                    <p class="some-button math-course" onclick="getInfo(mathRegSix)"><a>Math 6</a></p>
+                    <p class="some-button math-course"><a onclick="getInfo(mathHonSix)">Accelerated Math 6</a></p>
+                </div> 
+                <div id="pe-core" class="course">
+                    <h3>PE Courses</h3>
+                    <p class="some-button pe-course" onclick="getInfo(indoorPE)"><a>Indoor PE</a></p>
+                    <p class="some-button pe-course"><a onclick="getInfo(outdoorPE)">Outdoor PE</a></p>
+                </div>
+                <div id="science-core" class="course">
+                    <h3>Science Courses</h3>
+                    <p class="some-button science-course" onclick="getInfo(earthSpaceScienceSix)"><a>Earth and Space Science</a></p>
+                </div> 
+                <div id="socialstudies-core" class="course">
+                    <h3>Social Studies Courses</h3>
+                    <p class="some-button socialstudies-course" onclick="getInfo(socialStudiesSix)"><a>Social Studies 6</a></p>
+                </div> 
+                <div id="worldlanguage-core" class="course">
+                    <h3>World Language Courses</h3>
+                    <p class="some-button worldlanguage-course" onclick="getInfo(frenchA)"><a>Survey French A</a></p>
+                    <p class="some-button worldlanguage-course" onclick="getInfo(germanA)"><a>Survey German A</a></p>
+                    <p class="some-button worldlanguage-course" onclick="getInfo(latinA)"><a>Survey Latin A</a></p>
+                    <p class="some-button worldlanguage-course" onclick="getInfo(mandarinA)"><a>Survey Mandarin A</a></p>
+                </div> 
+                <!--
                 <h3>Required</h3>
                 <button class="accordion">ELA</button>
                 <div class="panel">
@@ -55,6 +79,14 @@
                     <button id="mandarin-survey-a" onclick="getInfo(mandarinA)">Mandarin Survey A</button>
                 </div>
                 <h3>Electives</h3>
+                <button class="accordion">World Language</button>
+                <div class="panel">
+                    <button id="french-survey-a" onclick="getInfo(frenchA)">French Survey A</button>
+                    <button id="german-survey-a" onclick="getInfo(germanA)">German Survey A</button>
+                    <button id="latin-survey-a" onclick="getInfo(latinA)">Latin Survey A</button>
+                    <button id="mandarin-survey-a" onclick="getInfo(mandarinA)">Mandarin Survey A</button>
+                </div>
+            -->
                 <script src="./resources/script.js"></script>
             </div>
             <div class="page-container">
@@ -89,42 +121,42 @@
                         
                     </div>
                     <div class="course-buttons">
-                        <button id="add-alternate">Add as Alternate</button>
                         <button id="add-course" onclick="addCourse()">Add Course to Schedule</button>
+                        <button id="add-alternate">Add as Alternate</button>
                     </div>
                     
-                    <div class="request-grid">
-                        <div id="ela">
+                    <div class="request-grid" onclick="openNav()">
+                        <div id="ela" class="grid-choice" onclick="openTab(this.id)">
                             <h3>English Language Arts<a href="javascript:void(0)" id="ela-remove" class="remove-button" onclick="removeCourse('ela')">&times;</a></h3>
                             <br>
                             <p id="ela-choice">Select a Course</p>
                         </div>
-                        <div id="math">
+                        <div id="math" class="grid-choice" onclick="openTab(this.id)">
                             <h3>Math<a href="javascript:void(0)" id="math-remove" class="remove-button" onclick="removeCourse('math')">&times;</a></h3>
                             <br>
                             <p id="math-choice">Select a Course</p>
                         </div>
-                        <div id ="science">
+                        <div id ="science" class="grid-choice" onclick="openTab(this.id)">
                             <h3>Science<a href="javascript:void(0)" id="science-remove" class="remove-button" onclick="removeCourse('science')">&times;</a></h3>
                             <br>
                             <p id="science-choice">Select a Course</p>
                         </div>
-                        <div id="socialstudies">
+                        <div id="socialstudies" class="grid-choice" onclick="openTab(this.id)">
                             <h3>Social Studies<a href="javascript:void(0)" id="socialstudies-remove" class="remove-button" onclick="removeCourse('socialstudies')">&times;</a></h3>
                             <br>
                             <p id="socialstudies-choice">Select a Course</p>
                         </div>
-                        <div id="pe">
+                        <div id="pe" class="grid-choice" onclick="openTab(this.id)">
                             <h3>P.E.<a href="javascript:void(0)" id="pe-remove" class="remove-button" onclick="removeCourse('pe')">&times;</a></h3>
                             <br>
                             <p id="pe-choice">Select a Course</p>
                         </div>
-                        <div id="worldlanguage">
+                        <div id="worldlanguage" class="grid-choice" onclick="openTab(this.id)">
                             <h3>World Language<a href="javascript:void(0)" id="worldlanguage-remove" class="remove-button" onclick="removeCourse('worldlanguage')">&times;</a></h3>
                             <br>
                             <p id="worldlanguage-choice">Select a Course</p>
                         </div>
-                        <div class="elective-one">
+                        <div class="elective-one" class="grid-choice">
                             <h3>Elective</h3>
                             <br>
                             <p id="elective-one">Select a Course</p>
