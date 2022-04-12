@@ -313,8 +313,19 @@ let stem = {
   Engineering Design approach as well as synergizing group dynamics. `
 }
 
-
 //Fine Arts Electives
+let introVisualArts = {
+  _subject: 'elective',
+  _name: "Introduction to Visual Arts",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: '$10',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `The purpose of this nine week course is to introduce students to a basic understanding of visual arts. Students will try different types of art\
+  media, like drawing and painting, while also learning about art appreciation, art history, and art criticism. This class is designed to help\
+  students engage their creativity as well as developing their art skills.`
+}
 let beginningBand = {
   _subject: 'elective',
   _name: "Beginning Band",
@@ -328,6 +339,58 @@ let beginningBand = {
   instrument screening where the band director will help guide your student through the instrument selection process and provide information\
   for purchasing or renting an instrument. Students in band are expected to participate in one evening concert each semester for a major\
   portion of their grade. `
+}
+let beginningChorus = {
+  _subject: 'elective',
+  _name: "Beginning Chorus",
+  _length: 'Year Long',
+  _credit: 4,
+  _fee: '$40',
+  _grade: '6',
+  _prereq: 'None',
+  _info: `The Choral Music program is designed to enhance the musical creative and expressive qualities of all students. Beginning Chorus is a yearlong ensemble open to all sixth grade students. Students in this choir will learn the fundamentals of singing and music theory through daily\
+  activities and practice. Students will also gain basic musical and historical knowledge. Students participate in daily rehearsals and perform\
+  in one mandatory evening concert per semester as well as various school assemblies and State Choral Performance Assessment. Optional\
+  Honor Choirs are available.`
+}
+let advancedChorus = {
+  _subject: 'elective',
+  _name: "Advanced Chorus",
+  _length: 'Year Long',
+  _credit: 4,
+  _fee: '$40',
+  _grade: '6,7 & 8',
+  _prereq: 'Audition',
+  _info: `Advanced Chorus is a course designed for highly motivated choral students to apply musical skills as they continue to create and experience\
+  performance through a choral ensemble. Students will continue developing mastery of solfege, major and minor scales, sight-singing and\
+  multi-part harmonies. Students will convey musical interpretation with the use of dynamics and phrasing, while incorporating facial\
+  expression and movement for refined presentation. Mandatory graded performances include one evening concert per semester, school\
+  assemblies and State Choral Performance Assessment. Optional Honor Choirs/All-State auditions are available. `
+}
+let beginningTheatre = {
+  _subject: 'elective',
+  _name: "Beginning Theatre",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `This course will offer students exposure to basic theatre knowledge and acting skills. Students will build confidence and become more\
+  comfortable expressing themselves in front of others.  `
+}
+let advancedTheatre = {
+  _subject: 'elective',
+  _name: "Advanced Theatre",
+  _length: 'Semester Long',
+  _credit: 2,
+  _fee: '$50',
+  _grade: '6,7 & 8',
+  _prereq: 'Audition',
+  _info: `This course will allow students to build upon foundations of vocal, kinesthetic, emotional, analytical, and intellectual elements of theatrical\
+  training through improvisation, dramatization, process-centered elements of dramatic performance, aesthetics, criticism, and history. In\
+  addition, this course will focus on one major production each semester. Students must either audition and be approved with a one minute\
+  monologue, or obtain instructor approval to register. After school productions and some rehearsals will take place at the high school\
+  auditorium and will be mandatory. Students may also be required to participate in fundraising for the program.  `
 }
 
 //General Electives
@@ -357,8 +420,201 @@ let innovativeExplorations = {
   and creative expression, and research skills while working toward an innovative solution to a problem. This course also provides support of\
   affective development in students from a gifted teacher. `
 }
+//Language Arts Elective
+let compWorkshop = {
+  _subject: 'elective',
+  _name: "Composition Workshop",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `This elective will provide an overview of the basic elements of modern English usage, such as spelling, parts of speech, capitalization,\
+  punctuation, subject/verb agreement, and correct pronoun usage. The course will include consistent writing experiences paying special\
+  attention to Madison City's writing curriculum, claim, data, commentary, and MLA formatting and citations. With the writing experiences,\
+  students will also participate in typing, drafting, editing, and revising. This course is offered to meet the need for a foundation in grammar,\
+  sentence structure, composition, and technological publishing skills for final writing projects. `
+}
+let creativeWritingI = {
+  _subject: 'elective',
+  _name: "Creative Writing I",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `This elective will provide an overview of the basic elements of modern English usage, such as spelling, parts of speech, capitalization,\
+  punctuation, subject/verb agreement, and correct pronoun usage. The course will include consistent writing experiences paying special\
+  attention to Madison City's writing curriculum, claim, data, commentary, and MLA formatting and citations. With the writing experiences,\
+  students will also participate in typing, drafting, editing, and revising. This course is offered to meet the need for a foundation in grammar,\
+  sentence structure, composition, and technological publishing skills for final writing projects. `
+}
+let introPubSpeaking = {
+  _subject: 'elective',
+  _name: "Introduction to Public Speaking",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `Students will participate in activities preparing them to speak effectively. Students will gain confidence, poise, and self-esteem. This course\
+  will include practice in vocal skills, organization, persuasion, and argument. Activities may include informative and persuasive speeches,\
+  readings from literature, and an introduction to debate. `
+}
+let speechDebate = {
+  _subject: 'elective',
+  _name: "Speech and Debate",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: '$10',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `This course is designed to develop student competency in research, writing, speech, and debate skills. Discussions over the course of the\
+  term will include current events, historical legal cases and classic debate topics. Students will engage in various critical thinking activities\
+  including debates, speeches, presentations, and analytical writing. This course integrates listening, speaking, reading, writing, and grammar\
+  skills. Rudimentary research skills will be introduced and word processing skills taught. This course will cover a variety of speech and\
+  debate events as outlined by the National Speech and Debate Association such as, but not limited to, Lincoln-Douglas, Policy, Public\
+  Forum, Congressional Debate, and Speech events.`
+}
+let readingLab = {
+  _subject: 'elective',
+  _name: "Reading Lab",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'Teacher Recommndation',
+  _info: `Recommendation required by school based on data.
+  This course is designed for students who need support with reading related skills. For maximum success, parents, students, and academic\
+  support teachers communicate frequently to increase student success with these skills. Recommendation is determined by a student's\
+  academic performance and identified needs. Students may be re-evaluated at the end of each grading period and, if recommended by\
+  the teacher, may be moved out of the class into another elective, or may remain in the class.`
+}
 
- 
+let yearbook = {
+  _subject: 'elective',
+  _name: "Yearbook",
+  _length: 'Year Long',
+  _credit: 4,
+  _fee: '$10',
+  _grade: '6,7 & 8',
+  _prereq: 'Must Apply',
+  _info: `Students create, design, and produce the school’s yearbook; learn and use publishing tools; utilize desktop publishing skills; refine revising\
+  and editing skills; work under established deadlines; and create spectacular pictures by using PhotoShop. The yearbook staff may be\
+  required to stay after school on occasion in order to complete deadlines. Requirements for becoming a staff member are as follows: fill out\
+  an application, be interviewed by the adviser and present staff, and obtain three recommendations (one of which is the present English\
+  teacher).`
+}
+//Math Electives
+let mathMeetsArt = {
+  _subject: 'elective',
+  _name: "Math Meets Art",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'None',
+  _info: `This elective course focuses on the creative side of math, where students will combine several mathematical concepts and principles to\
+  create unique artwork. During the 9 weeks, students will draw, build, and observe 3 dimensional figures, learn how to create scale replicas\
+  and drawings, using transformations to design tessellations and mandalas, and explore the Pythagorean Theorem, the Sierpinski Triangle,\
+  Koch's Snowflake, and the Golden Ratio.`
+}
+let mathLab = {
+  _subject: 'elective',
+  _name: "Math Lab",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6,7 & 8',
+  _prereq: 'Teacher Recommendation',
+  _info: `Recommendation based on student data and identified needs.
+  This hybrid course supports students through the use of small group instruction and an interactive computer program. It focuses on number\
+  sense and fraction relationships. Placement in this class is based on academic need. Students may be re-evaluated at the end of each\
+  grading period and, if recommended by the teacher, may be moved out of the class into another elective, or may remain in the class.`
+}
+//PE Electives
+let electIndoorPE = {
+  _subject:'elective',
+  _name: "Indoor Rec and Team Sports",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6, 7 and 8',
+  _prereq: 'None',
+  _info: `This course will enhance students' ability to apply tactics and strategies to modified game play; demonstrate fundamental movement skills\
+  in a variety of contexts; select and participate in physical activity; cooperate with and encourage classmates; accept individual differences\
+  and demonstrate inclusive behaviors; and engage in physical activity for enjoyment and self-expression. Students will participate in daily\
+  exercise, stretching, cardiovascular activities and weekly units of recreational and team sport concepts. The majority of this course will be\
+  held indoors.`
+}
+let electOutdoorPE = {
+  _subject: 'elective',
+  _name: "Outdoor Rec and Team Sports",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6, 7 and 8',
+  _prereq: 'None',
+  _info: `This course will enhance students' ability to apply tactics and strategies to modified game play; demonstrate fundamental movement skills\
+  in a variety of contexts; select and participate in physical activity; cooperate with and encourage classmates; accept individual differences\
+  and demonstrate inclusive behaviors; and engage in physical activity for enjoyment and self-expression. Students will participate in daily\
+  exercise, stretching, cardiovascular activities and weekly units of recreational and team sport concepts. The majority of this course will be\
+  held outdoors.`
+}
+
+//World Language Electives
+let electFrenchA = {
+  _subject: 'elective',
+  _name: "French Survey A",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: '$10',
+  _grade: '6 and 7',
+  _prereq: 'None',
+  _info: `This survey course of French language will involve listening, speaking, reading, and writing skills involving\
+  familiar topics. Students will understand and respond to simple expressions. They will speak and write using learned vocabulary in this\
+  introduction to each of the languages and cultures that they will explore during the survey. A minimum of one survey of world language\
+  class is required for all sixth grade students. `
+}
+let electGermanA = {
+  _subject: 'elective',
+  _name: "German Survey A",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: '$10',
+  _grade: '6 and 7',
+  _prereq: 'None',
+  _info: `This survey course of German language will involve listening, speaking, reading, and writing skills involving\
+  familiar topics. Students will understand and respond to simple expressions. They will speak and write using learned vocabulary in this\
+  introduction to each of the languages and cultures that they will explore during the survey. A minimum of one survey of world language\
+  class is required for all sixth grade students. `
+}
+let electLatinA = {
+  _subject: 'elective',
+  _name: "Latin Survey A",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: '$10',
+  _grade: '6 and 7',
+  _prereq: 'None',
+  _info: `This survey course of Latin language will involve listening, speaking, reading, and writing skills involving\
+  familiar topics. Students will understand and respond to simple expressions. They will speak and write using learned vocabulary in this\
+  introduction to each of the languages and cultures that they will explore during the survey. A minimum of one survey of world language\
+  class is required for all sixth grade students. `
+}
+let electMandarinA = {
+  _subject: 'elective',
+  _name: "Mandarin Survey A",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: '$10',
+  _grade: '6 and 7',
+  _prereq: 'None',
+  _info: `This survey course of Mandarin language will involve listening, speaking, reading, and writing skills involving\
+  familiar topics. Students will understand and respond to simple expressions. They will speak and write using learned vocabulary in this\
+  introduction to each of the languages and cultures that they will explore during the survey. A minimum of one survey of world language\
+  class is required for all sixth grade students. `
+}
 var classGetter = []; 
 let subjects = [];
 let classList = [];
