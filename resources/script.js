@@ -188,6 +188,50 @@ let mandarinA = {
   introduction to each of the languages and cultures that they will explore during the survey. A minimum of one survey of world language\
   class is required for all sixth grade students. `
 }
+
+let greenpowerRacing = {
+  _subject: 'elective',
+  _name: "Greenpower Racing",
+  _length: '9-Weeks',
+  _credit: 1,
+  _fee: 'None',
+  _grade: '6, 7 & 8',
+  _prereq: 'Must Apply',
+  _info: `Students plan, build, and test a Greenpower USA car for competitions. Students will learn about business disciplines in the engineering\
+  world focusing on leadership, engineering, promotion, presentation, testing, and safety. There is no fee for this course due to the expected\
+  fundraising efforts of the class. A competitive application process is required. `
+}
+
+let scholarsBowlI = {
+  _subject: 'elective',
+  _name: "Scholar's Bowl I",
+  _length: '9-Weeks',
+  _credit: 2,
+  _fee: '$25',
+  _grade: '6',
+  _prereq: 'None',
+  _info: `Scholar's Bowl I is an introductory class for 6th grade students. Students will become acquainted with the format and knowledge required\
+  to be academically competitive on the Scholars Bowl team. This class involves learning information from all areas of knowledge.\
+  Including but not limited to: geography, history, literature, science, fine arts, current events, popular culture, sports and more. Students will\
+  be tested on any and all learned materials as a means to prepare them for academic competition. Some students in this class will be\
+  expected to compete on a 6th grade competition team with most competitions occurring on Saturday mornings in schools throughout the\
+  state.`
+}
+let beginningBand = {
+  _subject: 'elective',
+  _name: "Beginning Band",
+  _length: 'Year Long',
+  _credit: 4,
+  _fee: '$100',
+  _grade: '6,7 & 8',
+  _prereq: 'Instrument Screening',
+  _info: `Beginning Band is a year-long class designed for the student who has not played a band instrument before. Fundamentals of playing a\
+  musical instrument and accurate reading of music are stressed. Instruments must be provided by each student. Students must attend an\
+  instrument screening where the band director will help guide your student through the instrument selection process and provide information\
+  for purchasing or renting an instrument. Students in band are expected to participate in one evening concert each semester for a major\
+  portion of their grade. `
+}
+ 
 var classGetter = []; 
 let subjects = [];
 let classList = [];
@@ -211,15 +255,68 @@ function getInfo(id) {
   classGetter = [id._subject, id._name, id._credit, id];
 }
 
-  
+var electiveHours = 0;
 function addCourse(){
-  var sure = true;
+  
+  var electiveOneCheck = ['one', 'two', 'three', 'four', 'five', 'six'];
+  for (let e = 0; e < electiveOneCheck.length; e++){
+    if (classGetter[0] === 'elective' && classGetter[2] === 1 && document.getElementById(`elective-${electiveOneCheck[e]}-choice`).innerText === "Select a Course" && document.getElementById(`elective-${electiveOneCheck[e]}`).style.display !== 'none'){
+      document.getElementById(`elective-${electiveOneCheck[e]}-choice`).innerText = classGetter[1];
+      document.getElementById(`elective-${electiveOneCheck[e]}`).style.backgroundColor = "lightgreen";
+      document.getElementById(`elective-${electiveOneCheck[e]}-remove`).style.visibility = "visible";
+      classList.push(classGetter[1]);
+      subjects.push(classGetter[3]);
+      credits += classGetter[2]
+      document.getElementById("class-list").innerHTML = classList;
+      document.getElementById("credit-hours").innerHTML = credits;
+      electiveHours += 1;
+      break;
+    }
+  }
+  for (let e = 0; e < electiveOneCheck.length; e += 2){
+    if (classGetter[0] === 'elective' && classGetter[2] === 2 && document.getElementById(`elective-${electiveOneCheck[e]}-choice`).innerText === "Select a Course" && document.getElementById(`elective-${electiveOneCheck[e]}`).style.display !== 'none'){
+      document.getElementById(`elective-${electiveOneCheck[e]}-choice`).innerText = classGetter[1];
+      document.getElementById(`elective-${electiveOneCheck[e]}`).style.backgroundColor = "lightgreen";
+      document.getElementById(`elective-${electiveOneCheck[e]}-remove`).style.visibility = "visible";
+      classList.push(classGetter[1]);
+      subjects.push(classGetter[3]);
+      credits += classGetter[2]
+      document.getElementById("class-list").innerHTML = classList;
+      document.getElementById("credit-hours").innerHTML = credits;
+      document.getElementById(`elective-${electiveOneCheck[e+1]}`).style.display = 'none';
+      document.getElementById(`elective-${electiveOneCheck[e]}`).style.width = "49.25%";
+      electiveHours += 2;
+      break;
+    }
+  }
+  
+  if (classGetter[0] === 'elective' && classGetter[2] === 4 && document.getElementById('elective-three-choice').innerText === "Select a Course" && document.getElementById(`elective-three`).style.display !== 'none'){
+    if (document.getElementById('elective-three-choice').innerText !== "Select a Course"){
+      alert('This is a year long course and will fill all four slots on the bottom row of the grid. Please remove any classes on the bottom row.')
+    } else {
+    document.getElementById(`elective-three-choice`).innerText = classGetter[1];
+    document.getElementById(`elective-three`).style.backgroundColor = "lightgreen";
+    document.getElementById(`elective-three-remove`).style.visibility = "visible";
+    classList.push(classGetter[1]);
+    subjects.push(classGetter[3]);
+    credits += classGetter[2]
+    document.getElementById("class-list").innerHTML = classList;
+    document.getElementById("credit-hours").innerHTML = credits;
+    document.getElementById('elective-four').style.display = "none";
+    document.getElementById('elective-five').style.display = "none";
+    document.getElementById('elective-six').style.display = "none";
+    document.getElementById('elective-three').style.width = "100%";
+    electiveHours += 4;
+  }
+}
+var sure = true;
   for(var i = 0; i < classList.length; i++){
     if(classList[i] === document.getElementById(`${classGetter[0]}-choice`).innerText ){
       alert("This class is already in your schedule. Please select another.");
       sure = false;
   }
-}
+}  
+
   if(sure === true){
     document.getElementById(`${classGetter[0]}-choice`).innerText = classGetter[1];
     document.getElementById(classGetter[0]).style.backgroundColor = "lightgreen";
@@ -230,6 +327,10 @@ function addCourse(){
     document.getElementById("class-list").innerHTML = classList;
     document.getElementById("credit-hours").innerHTML = credits;
   }
+  if (credits === 20){
+    alert('Your schedule is now complete!')
+  }
+
 }
   
 function removeCourse(id) {
@@ -239,6 +340,25 @@ function removeCourse(id) {
       classList.splice(i,1);
       subjects.splice(i,1);
     }
+  }
+  if(id === 'elective-three' && document.getElementById('elective-three').style.width === "100%"){
+    document.getElementById('elective-three').style.width = "24%"
+    document.getElementById('elective-four').style.display = "block";
+    document.getElementById('elective-five').style.display = "block";
+    document.getElementById('elective-six').style.display = "block";
+
+  }
+  if(id === 'elective-one' && document.getElementById('elective-one').style.width === "49.25%"){
+    document.getElementById('elective-one').style.width = "24%"
+    document.getElementById('elective-two').style.display = "block";
+  }
+  if(id === 'elective-three' && document.getElementById('elective-three').style.width === "49.25%"){
+    document.getElementById('elective-three').style.width = "24%"
+    document.getElementById('elective-four').style.display = "block";
+  }
+  if(id === 'elective-five' && document.getElementById('elective-five').style.width === "49.25%"){
+    document.getElementById('elective-five').style.width = "24%"
+    document.getElementById('elective-six').style.display = "block";
   }
   document.getElementById(`${id}-choice`).innerText = "Select a Course";
   document.getElementById(id).style.backgroundColor = null;
@@ -258,6 +378,4 @@ function openTab(subject){
       document.getElementById(`${allSubjects[i]}-core`).style.display = "block";
     }
   }
-  
-  
 }

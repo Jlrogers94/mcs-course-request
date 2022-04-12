@@ -50,7 +50,7 @@
                     <h3>Academic Teams</h3>
                     <p class="some-button elective-course" onclick="getInfo(compChess)"><a>Competition Chess</a></p>
                     <p class="some-button elective-course" onclick="getInfo(greenpowerRacing)"><a>Greenpower Racing</a></p>
-                    <p class="some-button elective-course" onclick="getInfo(scholarsBowl)"><a>Scholars Bowl I</a></p>
+                    <p class="some-button elective-course" onclick="getInfo(scholarsBowlI)"><a>Scholars Bowl I</a></p>
                     <p class="some-button elective-course" onclick="getInfo(scienceOlympiad)"><a>Science Olympiad</a></p>
                     <h3>CTE and STEM Courses</h3>
                     <p class="some-button elective-course" onclick="getInfo(csim)"><a>Computer Science for Innovators and Makers</a></p>
@@ -196,16 +196,36 @@
                             <br>
                             <p id="worldlanguage-choice">Select a Course</p>
                         </div>
-                        <div id="elective" class="elective-one" class="grid-choice" onclick="openTab(this.id)">
-                            <h3>Elective</h3>
+                        <div id="elective-one" class="elective" class="grid-choice" onclick="openTab('elective')">
+                            <h3>Elective<a href="javascript:void(0)" id="elective-one-remove" class="remove-button" onclick="removeCourse('elective-one')">&times;</a></h3>
                             <br>
-                            <p id="elective-one">Select a Course</p>
+                            <p id="elective-one-choice">Select a Course</p>
                         </div>
-                        <div class="elective-two"></div>
-                        <div class="elective-three"></div>
-                        <div class="elective-four"></div>
-                        <div class="elective-five"></div>
-                        <div class="elective-six"></div>
+                        <div id="elective-two" class="elective" class="grid-choice" onclick="openTab('elective')">
+                            <h3>Elective<a href="javascript:void(0)" id="elective-two-remove" class="remove-button" onclick="removeCourse('elective-two')">&times;</a></h3>
+                            <br>
+                            <p id="elective-two-choice">Select a Course</p>
+                        </div>
+                        <div id="elective-three" class="elective" class="grid-choice" onclick="openTab('elective')">
+                            <h3>Elective<a href="javascript:void(0)" id="elective-three-remove" class="remove-button" onclick="removeCourse('elective-three')">&times;</a></h3>
+                            <br>
+                            <p id="elective-three-choice">Select a Course</p>
+                        </div>
+                        <div id="elective-four" class="elective" class="grid-choice" onclick="openTab('elective')">
+                            <h3>Electiv<a href="javascript:void(0)" id="elective-four-remove" class="remove-button" onclick="removeCourse('elective-four')">&times;</a>e</h3>
+                            <br>
+                            <p id="elective-four-choice">Select a Course</p>
+                        </div>
+                        <div id="elective-five" class="elective" class="grid-choice" onclick="openTab('elective')">
+                            <h3>Elective<a href="javascript:void(0)" id="elective-five-remove" class="remove-button" onclick="removeCourse('elective-five')">&times;</a></h3>
+                            <br>
+                            <p id="elective-five-choice">Select a Course</p>
+                        </div>
+                        <div id="elective-six" class="elective" class="grid-choice" onclick="openTab('elective')">
+                            <h3>Elective<a href="javascript:void(0)" id="elective-six-remove" class="remove-button" onclick="removeCourse('elective-six')">&times;</a></h3>
+                            <br>
+                            <p id="elective-six-choice">Select a Course</p>
+                        </div>
                     </div>
                     <p id="class-list">Classes</p>
                     <p id="credit-hours">Credits</p>
