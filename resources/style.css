@@ -37,38 +37,37 @@ main {
     font-weight: 600;
     text-align: center;
 }
-.course h3{
-    background-color: black;
-}
-
-.side-nav {
-    width: 15%;
-    height: 100%;
-    background-color: #29367a;
-    border-right: 1px solid black;
-    overflow-y: auto;
-}
-
-.some-button{
-    color: white;
-}
 .some-button:hover{
     background-color: #29367a;
     cursor: pointer;
 }
 
-.side-nav h3 {
+.course h3{
+    background-color: black;
+}
+
+#side-nav {
+    width: 0%;
+    height: 100%;
+    background-color: #29367a;
+    border-right: 1px solid black;
+    overflow-y: auto;
+    transition: 0.4s;
+}
+
+#side-nav h3 {
     width: 100%;
     text-align: center;
     color: white;
     padding: 2px 0px;
     border-top: 2px solid black;
+    transition: 0.4s;
 
     
 }
 
-.page-container{
-    width: 85%;
+#page-container{
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -78,26 +77,29 @@ main {
     
 }
 .class-info {
-    width: 100%;
+    width: 98%;
     border: 1px solid black;
     border-radius: 5px;
 }
 
 .class-info{
-    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 1%;
     height: 25%;
 }
 #class-title{
     padding: 5px 0px;
+    width: 98%;
 }
-.extra-info{
+#extra-info{
     width: 98%;
     display: inline-flex;
     font-size: x-small;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     font-weight: 600;
     padding: 5px 5px;
+    visibility: hidden;
 }
 #class-overview{
     padding: 5px 5px;
@@ -112,13 +114,33 @@ main {
 .course-buttons button{
     margin-right: 10px;
 }
+#add-course{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #9a1c21;
+    color: white;
+    border: 2px solid #9a1c21;
+    transition: 0.4s;
+    font-weight: 700;
+}
+#add-course:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #9a1c21;
+    border: 2px solid #9a1c21;
+}
+#add-course:active{
+    background-color: #9a1c21;
+    color: white;
+    border: 2px solid #9a1c21;
+}
 #add-alternate{
     visibility: hidden;
 }
 
 .container {
     width: 75%;
-    height: 98%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,6 +155,7 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 3%;
 }
 .request-grid:hover{
     cursor: pointer;
@@ -141,10 +164,8 @@ main {
     float: right;
     padding-right: 2px;
     text-decoration: none;
-    color: #666;
-    visibility: hidden;
-    
-
+    color: black;
+    visibility: hidden; 
 }
 #math, #ela, #science, #socialstudies,#worldlanguage,#pe,
 #elective-one,#elective-two,#elective-three,#elective-four,
@@ -156,6 +177,7 @@ main {
     background-color: lightgrey;
     text-align: center;
     display: block;
+    border-radius: 5px;
 
 } 
 #math h3, #ela h3, #science h3, #socialstudies h3,#worldlanguage h3,#pe h3,
@@ -184,7 +206,8 @@ main {
   display: none;
 }
 #ela:hover, #math:hover, #pe:hover, #science:hover,#socialstudies:hover,#worldlanguage:hover,#elective-one:hover,#elective-two:hover,#elective-three:hover,#elective-four:hover,#elective-five:hover,#elective-six:hover{
-    background-color: #666;
+    background-color: #29367a;
+    color: white;
 }
 #ela:active, #math:active, #pe:active, #science:active, #socialstudies:active, #worldlanguage:active, #elective-one:active,#elective-two:active,#elective-three:active,#elective-four:active,#elective-five:active,#elective-six:active{
     background-color: lightgray;

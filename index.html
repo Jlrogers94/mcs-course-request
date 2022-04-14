@@ -15,7 +15,7 @@
             </div>
         </header>
         <main>
-            <div class="side-nav">
+            <div id="side-nav">
                 <div id="ela-core" class="course">
                     <h3>ELA Courses</h3>
                     <p class="some-button ela-course" onclick="getInfo(elaRegSix)"><a>Language Arts 6</a></p>
@@ -24,12 +24,14 @@
                 <div id="math-core" class="course">
                     <h3>Math Courses</h3>
                     <p class="some-button math-course" onclick="getInfo(mathRegSix)"><a>Math 6</a></p>
-                    <p class="some-button math-course"><a onclick="getInfo(mathHonSix)">Accelerated Math 6</a></p>
+                    <p class="some-button math-course" onclick="getInfo(mathHonSix)"><a>Accelerated Math 6</a></p>
+                    <p class="some-button math-course" onclick="getInfo(mathTeamSix)"><a>Math Team 6</a></p>
+
                 </div> 
                 <div id="pe-core" class="course">
                     <h3>PE Courses</h3>
                     <p class="some-button pe-course" onclick="getInfo(indoorPE)"><a>Indoor PE</a></p>
-                    <p class="some-button pe-course"><a onclick="getInfo(outdoorPE)">Outdoor PE</a></p>
+                    <p class="some-button pe-course" onclick="getInfo(outdoorPE)"><a>Outdoor PE</a></p>
                 </div>
                 <div id="science-core" class="course">
                     <h3>Science Courses</h3>
@@ -87,55 +89,15 @@
                     <p class="some-button elective-course" onclick="getInfo(electLatinA)"><a>Survey Latin A</a></p>
                     <p class="some-button elective-course" onclick="getInfo(electMandarinA)"><a>Survey Mandarin A</a></p>
                 </div> 
-                <!--
-                <h3>Required</h3>
-                <button class="accordion">ELA</button>
-                <div class="panel">
-                    <button id="ela-reg-six" onclick="getInfo(elaRegSix)">Language Arts 6</button>
-                    <button id="ela-hon-six" onclick="getInfo(elaHonSix)">Honors Language Arts 6</button>
-                </div>
-                <button class="accordion">Math</button>
-                <div class="panel">
-                    <button id="math-reg-six" onclick="getInfo(mathRegSix)">Math 6</button>
-                    <button id="math-hon-six" onclick="getInfo(mathHonSix)">Accelerated Math 6</button>
-                </div>
-                <button class="accordion">PE</button>
-                <div class="panel">
-                    <button id="indoor-pe" onclick="getInfo(indoorPE)">Indoor PE</button>
-                    <button id="outdoor-pe" onclick="getInfo(outdoorPE)">Outdoor PE</button>
-                </div>
-                <button class="accordion">Science</button>
-                <div class="panel">
-                    <button id="earth-space-six" onclick="getInfo(earthSpaceScienceSix)">Earth and Space Science 6</button>
-                </div>
-                <button class="accordion">Social Studies</button>
-                <div class="panel">
-                    <button id="social-studies-six" onclick="getInfo(socialStudiesSix)">Social Studies 6</button>
-                </div>
-                <button class="accordion">World Language</button>
-                <div class="panel">
-                    <button id="french-survey-a" onclick="getInfo(frenchA)">French Survey A</button>
-                    <button id="german-survey-a" onclick="getInfo(germanA)">German Survey A</button>
-                    <button id="latin-survey-a" onclick="getInfo(latinA)">Latin Survey A</button>
-                    <button id="mandarin-survey-a" onclick="getInfo(mandarinA)">Mandarin Survey A</button>
-                </div>
-                <h3>Electives</h3>
-                <button class="accordion">World Language</button>
-                <div class="panel">
-                    <button id="french-survey-a" onclick="getInfo(frenchA)">French Survey A</button>
-                    <button id="german-survey-a" onclick="getInfo(germanA)">German Survey A</button>
-                    <button id="latin-survey-a" onclick="getInfo(latinA)">Latin Survey A</button>
-                    <button id="mandarin-survey-a" onclick="getInfo(mandarinA)">Mandarin Survey A</button>
-                </div>
-            -->
+                
                 <script src="./resources/script.js"></script>
             </div>
-            <div class="page-container">
+            <div id="page-container">
                 <div class="container">
                     <div class="class-info">
                         <div>
-                            <h3 id="class-title">Select a course to learn more about it!</h3>
-                            <div class="extra-info">
+                            <h3 id="class-title">Click a subject to select a course and learn more about it!</h3>
+                            <div id="extra-info">
                                 <div>
                                     <p>Grades:</p>
                                     <p id="class-grade"></p>
@@ -228,9 +190,6 @@
                             <p id="elective-six-choice">Select a Course</p>
                         </div>
                     </div>
-                    <p id="class-list">Classes</p>
-                    <p id="credit-hours">Credits</p>
-                
                 </div>
             </div>
         </main>

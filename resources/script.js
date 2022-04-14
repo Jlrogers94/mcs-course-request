@@ -79,6 +79,21 @@ let mathHonSix = {
   who desire the opportunity to take Accelerated Math 7. Concepts will include, but are not limited to ratios and rates, rational numbers,\
   expressions and equations, geometrical reasoning, and statistics.`
 }
+let mathTeamSix = {
+  _subject: 'math',
+  _name: "Math Team 6",
+  _length: 'Year Long',
+  _credit: 4,
+  _fee: 'Tournament Costs',
+  _grade: '6',
+  _prereq: 'None',
+  _info: ` **There will be fees associated with this class for tournament costs. Saturday tournament attendance is expected, and the schedule is to be determined.**\
+  Math Team Accelerated 6 is based on the Alabama Course of Study Standards for 6th grade. Concepts will include, but are not limited to\
+  ratios and rates, rational numbers, expressions and equations, geometrical reasoning, and statistics. Students in Math Team Accelerated\
+  Math 6 are expected to apply all skills learned at a higher level of conceptual understanding. Students who successfully complete this course\
+  will be prepared for Math Team Accelerated Math 7 and on the pathway for placement into Math Team Accelerated Math 8. Students will\
+  be expected to attend weekend competitions. `
+}
 let earthSpaceScienceSix = {
   _subject: 'science',
   _name: "Earth and Space Science",
@@ -191,6 +206,7 @@ let mandarinA = {
 
 //Academic Team Electives
 let greenpowerRacing = {
+  _domain: 'Academic Team Elect',
   _subject: 'elective',
   _name: "Greenpower Racing",
   _length: '9-Weeks',
@@ -204,6 +220,7 @@ let greenpowerRacing = {
 }
 
 let scholarsBowlI = {
+  _domain: 'Academic Team Elect',
   _subject: 'elective',
   _name: "Scholar's Bowl I",
   _length: '9-Weeks',
@@ -219,6 +236,7 @@ let scholarsBowlI = {
   state.`
 }
 let introChess = {
+  _domain: 'Academic Team Elect',
   _subject: 'elective',
   _name: "Introduction to Chess",
   _length: '9-Weeks',
@@ -232,6 +250,7 @@ let introChess = {
 
 }
 let compChess = {
+  _domain: 'Academic Team Elect',
   _subject: 'elective',
   _name: "Competitive Chess",
   _length: '9-Weeks',
@@ -244,6 +263,7 @@ let compChess = {
   moves. Students compete in various tournaments outside of school.`
 }
 let scienceOlympiad = {
+  _domain: 'Academic Team Elect',
   _subject: 'elective',
   _name: "Science Olympiad",
   _length: '9-Weeks',
@@ -257,6 +277,7 @@ let scienceOlympiad = {
 }
 //CTE and STEM Electives
 let csim = {
+  _domain: 'CTE/STEM Elect',
   _subject: 'elective',
   _name: "C.S.I.M.",
   _length: '9-Weeks',
@@ -270,6 +291,7 @@ let csim = {
   authentic tasks. CSIM broadens students' understanding of computer science concepts through application. `
 }
 let designModeling = {
+  _domain: 'CTE/STEM Elect',
   _subject: 'elective',
   _name: "Design and Modeling",
   _length: '9-Weeks',
@@ -283,6 +305,7 @@ let designModeling = {
   in a collaborative setting, and the critical role documentation plays in each step of the design process.`
 }
 let digPubTools = {
+  _domain: 'CTE/STEM Elect',
   _subject: 'elective',
   _name: "Digital Publishing Tools",
   _length: '9-Weeks',
@@ -296,6 +319,7 @@ let digPubTools = {
   digitally. Digital citizenship concepts and skills will be taught throughout the class. `
 }
 let stem = {
+  _domain: 'CTE/STEM Elect',
   _subject: 'elective',
   _name: "STEM",
   _length: '9-Weeks',
@@ -315,6 +339,7 @@ let stem = {
 
 //Fine Arts Electives
 let introVisualArts = {
+  _domain: 'Fine Arts Elect',
   _subject: 'elective',
   _name: "Introduction to Visual Arts",
   _length: '9-Weeks',
@@ -327,6 +352,7 @@ let introVisualArts = {
   students engage their creativity as well as developing their art skills.`
 }
 let beginningBand = {
+  _domain: 'Fine Arts Elect',
   _subject: 'elective',
   _name: "Beginning Band",
   _length: 'Year Long',
@@ -341,6 +367,7 @@ let beginningBand = {
   portion of their grade. `
 }
 let beginningChorus = {
+  _domain: 'Fine Arts Elect',
   _subject: 'elective',
   _name: "Beginning Chorus",
   _length: 'Year Long',
@@ -354,6 +381,7 @@ let beginningChorus = {
   Honor Choirs are available.`
 }
 let advancedChorus = {
+  _domain: 'Fine Arts Elect',
   _subject: 'elective',
   _name: "Advanced Chorus",
   _length: 'Year Long',
@@ -368,6 +396,7 @@ let advancedChorus = {
   assemblies and State Choral Performance Assessment. Optional Honor Choirs/All-State auditions are available. `
 }
 let beginningTheatre = {
+  _domain: 'Fine Arts Elect',
   _subject: 'elective',
   _name: "Beginning Theatre",
   _length: '9-Weeks',
@@ -379,6 +408,7 @@ let beginningTheatre = {
   comfortable expressing themselves in front of others.  `
 }
 let advancedTheatre = {
+  _domain: 'Fine Arts Elect',
   _subject: 'elective',
   _name: "Advanced Theatre",
   _length: 'Semester Long',
@@ -395,6 +425,7 @@ let advancedTheatre = {
 
 //General Electives
 let digCom = {
+  _domain: 'General Elect',
   _subject: 'elective',
   _name: "Digital Communications (DigCom)",
   _length: 'Year Long',
@@ -408,6 +439,7 @@ let digCom = {
   moderating social media accounts. `
 }
 let innovativeExplorations = {
+  _domain: 'General Elect',
   _subject: 'elective',
   _name: "Innovative Explorations",
   _length: 'Semester or Year',
@@ -422,6 +454,7 @@ let innovativeExplorations = {
 }
 //Language Arts Elective
 let compWorkshop = {
+  _domain: 'Language Arts Elect',
   _subject: 'elective',
   _name: "Composition Workshop",
   _length: '9-Weeks',
@@ -436,6 +469,7 @@ let compWorkshop = {
   sentence structure, composition, and technological publishing skills for final writing projects. `
 }
 let creativeWritingI = {
+  _domain: 'Language Arts Elect',
   _subject: 'elective',
   _name: "Creative Writing I",
   _length: '9-Weeks',
@@ -450,6 +484,7 @@ let creativeWritingI = {
   sentence structure, composition, and technological publishing skills for final writing projects. `
 }
 let introPubSpeaking = {
+  _domain: 'Language Arts Elect',
   _subject: 'elective',
   _name: "Introduction to Public Speaking",
   _length: '9-Weeks',
@@ -462,6 +497,7 @@ let introPubSpeaking = {
   readings from literature, and an introduction to debate. `
 }
 let speechDebate = {
+  _domain: 'Language Arts Elect',
   _subject: 'elective',
   _name: "Speech and Debate",
   _length: '9-Weeks',
@@ -477,6 +513,7 @@ let speechDebate = {
   Forum, Congressional Debate, and Speech events.`
 }
 let readingLab = {
+  _domain: 'Language Arts Elect',
   _subject: 'elective',
   _name: "Reading Lab",
   _length: '9-Weeks',
@@ -492,6 +529,7 @@ let readingLab = {
 }
 
 let yearbook = {
+  _domain: 'Language Arts Elect',
   _subject: 'elective',
   _name: "Yearbook",
   _length: 'Year Long',
@@ -507,6 +545,7 @@ let yearbook = {
 }
 //Math Electives
 let mathMeetsArt = {
+  _domain: 'Math Elect',
   _subject: 'elective',
   _name: "Math Meets Art",
   _length: '9-Weeks',
@@ -520,6 +559,7 @@ let mathMeetsArt = {
   Koch's Snowflake, and the Golden Ratio.`
 }
 let mathLab = {
+  _domain: 'Math Elect',
   _subject: 'elective',
   _name: "Math Lab",
   _length: '9-Weeks',
@@ -534,6 +574,7 @@ let mathLab = {
 }
 //PE Electives
 let electIndoorPE = {
+  _domain: 'P.E. Elect',
   _subject:'elective',
   _name: "Indoor Rec and Team Sports",
   _length: '9-Weeks',
@@ -548,6 +589,7 @@ let electIndoorPE = {
   held indoors.`
 }
 let electOutdoorPE = {
+  _domain: 'P.E. Elect',
   _subject: 'elective',
   _name: "Outdoor Rec and Team Sports",
   _length: '9-Weeks',
@@ -564,6 +606,7 @@ let electOutdoorPE = {
 
 //World Language Electives
 let electFrenchA = {
+  _domain: 'World Lang Elect',
   _subject: 'elective',
   _name: "French Survey A",
   _length: '9-Weeks',
@@ -577,6 +620,7 @@ let electFrenchA = {
   class is required for all sixth grade students. `
 }
 let electGermanA = {
+  _domain: 'World Lang Elect',
   _subject: 'elective',
   _name: "German Survey A",
   _length: '9-Weeks',
@@ -590,6 +634,7 @@ let electGermanA = {
   class is required for all sixth grade students. `
 }
 let electLatinA = {
+  _domain: 'World Lang Elect',
   _subject: 'elective',
   _name: "Latin Survey A",
   _length: '9-Weeks',
@@ -603,6 +648,7 @@ let electLatinA = {
   class is required for all sixth grade students. `
 }
 let electMandarinA = {
+  _domain: 'World Lang Elect',
   _subject: 'elective',
   _name: "Mandarin Survey A",
   _length: '9-Weeks',
@@ -621,6 +667,7 @@ let classList = [];
 var credits = 0;
 
 function getInfo(id) {
+  document.getElementById("extra-info").style.visibility = "visible";
   var grade = document.getElementById("class-grade");
   var length = document.getElementById("class-length");
   var credit = document.getElementById("class-credit");
@@ -650,8 +697,6 @@ function addCourse(){
       classList.push(classGetter[1]);
       subjects.push(classGetter[3]);
       credits += classGetter[2]
-      document.getElementById("class-list").innerHTML = classList;
-      document.getElementById("credit-hours").innerHTML = credits;
       electiveHours += 1;
       break;
     }
@@ -664,8 +709,6 @@ function addCourse(){
       classList.push(classGetter[1]);
       subjects.push(classGetter[3]);
       credits += classGetter[2]
-      document.getElementById("class-list").innerHTML = classList;
-      document.getElementById("credit-hours").innerHTML = credits;
       document.getElementById(`elective-${electiveOneCheck[e+1]}`).style.display = 'none';
       document.getElementById(`elective-${electiveOneCheck[e]}`).style.width = "49.25%";
       electiveHours += 2;
@@ -674,23 +717,17 @@ function addCourse(){
   }
   
   if (classGetter[0] === 'elective' && classGetter[2] === 4 && document.getElementById('elective-three-choice').innerText === "Select a Course" && document.getElementById(`elective-three`).style.display !== 'none'){
-    if (document.getElementById('elective-three-choice').innerText !== "Select a Course"){
-      alert('This is a year long course and will fill all four slots on the bottom row of the grid. Please remove any classes on the bottom row.')
-    } else {
     document.getElementById(`elective-three-choice`).innerText = classGetter[1];
     document.getElementById(`elective-three`).style.backgroundColor = "lightgreen";
     document.getElementById(`elective-three-remove`).style.visibility = "visible";
     classList.push(classGetter[1]);
     subjects.push(classGetter[3]);
     credits += classGetter[2]
-    document.getElementById("class-list").innerHTML = classList;
-    document.getElementById("credit-hours").innerHTML = credits;
     document.getElementById('elective-four').style.display = "none";
     document.getElementById('elective-five').style.display = "none";
     document.getElementById('elective-six').style.display = "none";
     document.getElementById('elective-three').style.width = "100%";
     electiveHours += 4;
-  }
 }
 var sure = true;
   for(var i = 0; i < classList.length; i++){
@@ -706,16 +743,13 @@ var sure = true;
     document.getElementById(`${classGetter[0]}-remove`).style.visibility = "visible";
     classList.push(classGetter[1]);
     subjects.push(classGetter[3]);
-    credits += classGetter[2]
-    document.getElementById("class-list").innerHTML = classList;
-    document.getElementById("credit-hours").innerHTML = credits;
+    credits += classGetter[2];
+
   }
-  if (credits === 20){
-    alert('Your schedule is now complete!')
-  }
+ 
 
 }
-  
+
 function removeCourse(id) {
   for(var i = 0; i < classList.length; i++){
     if(classList[i] === document.getElementById(`${id}-choice`).innerText ){
@@ -746,13 +780,12 @@ function removeCourse(id) {
   document.getElementById(`${id}-choice`).innerText = "Select a Course";
   document.getElementById(id).style.backgroundColor = null;
   document.getElementById(`${id}-remove`).style.visibility = "hidden";
-  document.getElementById("class-list").innerHTML = classList;
-  document.getElementById("credit-hours").innerHTML = credits;
 }
 
 var subjectChosen;
 var allSubjects = ['ela', 'elective', 'math','pe','science','socialstudies','worldlanguage']
 function openTab(subject){
+  document.getElementById("side-nav").style.width = "20%";
   subjectChosen = subject;
   for(let i = 0; i < allSubjects.length; i++){
     if(subjectChosen !== allSubjects[i]){
