@@ -41,7 +41,9 @@ main {
     background-color: #29367a;
     cursor: pointer;
 }
-
+.some-button:active{
+    background-color: #666;
+}
 .course h3{
     background-color: black;
 }
@@ -130,8 +132,8 @@ main {
     border: 2px solid #9a1c21;
 }
 #add-course:active{
-    background-color: white;
-    color: black;
+    background-color: #9a1c21;
+    color: white;
     border: 2px solid #9a1c21;
 }
 #add-alternate{
