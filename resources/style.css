@@ -130,8 +130,8 @@ main {
     border: 2px solid #9a1c21;
 }
 #add-course:active{
-    background-color: #9a1c21;
-    color: white;
+    background-color: white;
+    color: black;
     border: 2px solid #9a1c21;
 }
 #add-alternate{
