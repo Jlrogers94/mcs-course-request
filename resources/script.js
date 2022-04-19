@@ -1,26 +1,3 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
-function openNav() {
-  document.getElementsByClassName("side-nav").style.width = "15%";
-  document.getElementsByClassName("page-container").style.marginLeft = "85%";
-}
 
 let elaRegSix = {
   _subject: 'ela',
@@ -666,7 +643,9 @@ let subjects = [];
 let classList = [];
 var credits = 0;
 
+
 function getInfo(id) {
+  var creditCheck = 0;
   document.getElementById("extra-info").style.visibility = "visible";
   var grade = document.getElementById("class-grade");
   var length = document.getElementById("class-length");
@@ -683,6 +662,10 @@ function getInfo(id) {
   prereq.innerText = id._prereq;
   fee.innerText = id._fee;
   classGetter = [id._subject, id._name, id._credit, id];
+  creditCheck = electiveHours + id._credit;
+  if (creditCheck > 6){
+    alert(`You do not have enough remaining credit hours to add ${id._name} as an elective. Please select another.`)
+  } 
 }
 
 var electiveHours = 0;
@@ -699,7 +682,7 @@ function addCourse(){
       credits += classGetter[2]
       electiveHours += 1;
       break;
-    }
+    } 
   }
   for (let e = 0; e < electiveOneCheck.length; e += 2){
     if (classGetter[0] === 'elective' && classGetter[2] === 2 && document.getElementById(`elective-${electiveOneCheck[e]}-choice`).innerText === "Select a Course" && document.getElementById(`elective-${electiveOneCheck[e]}`).style.display !== 'none'){
@@ -763,19 +746,22 @@ function removeCourse(id) {
     document.getElementById('elective-four').style.display = "block";
     document.getElementById('elective-five').style.display = "block";
     document.getElementById('elective-six').style.display = "block";
+    electiveHours -= 4;
 
-  }
-  if(id === 'elective-one' && document.getElementById('elective-one').style.width === "49.25%"){
+  } else if(id === 'elective-one' && document.getElementById('elective-one').style.width === "49.25%"){
     document.getElementById('elective-one').style.width = "24%"
     document.getElementById('elective-two').style.display = "block";
-  }
-  if(id === 'elective-three' && document.getElementById('elective-three').style.width === "49.25%"){
+    electiveHours -= 2;
+  } else if(id === 'elective-three' && document.getElementById('elective-three').style.width === "49.25%"){
     document.getElementById('elective-three').style.width = "24%"
     document.getElementById('elective-four').style.display = "block";
-  }
-  if(id === 'elective-five' && document.getElementById('elective-five').style.width === "49.25%"){
+    electiveHours -= 2;
+  } else if(id === 'elective-five' && document.getElementById('elective-five').style.width === "49.25%"){
     document.getElementById('elective-five').style.width = "24%"
     document.getElementById('elective-six').style.display = "block";
+    electiveHours -= 2;
+  } else {
+    electiveHours -= 1;
   }
   document.getElementById(`${id}-choice`).innerText = "Select a Course";
   document.getElementById(id).style.backgroundColor = null;

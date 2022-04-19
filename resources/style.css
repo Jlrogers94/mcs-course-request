@@ -37,9 +37,14 @@ main {
     font-weight: 600;
     text-align: center;
 }
+
 .some-button:hover{
     background-color: #29367a;
     cursor: pointer;
+}
+
+.some-button:active{
+    background-color: #666;
 }
 
 .course h3{
@@ -62,8 +67,6 @@ main {
     padding: 2px 0px;
     border-top: 2px solid black;
     transition: 0.4s;
-
-    
 }
 
 #page-container{
@@ -73,8 +76,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
 }
 .class-info {
     width: 98%;
@@ -94,8 +95,8 @@ main {
 #extra-info{
     width: 98%;
     display: inline-flex;
-    font-size: x-small;
-    justify-content: space-evenly;
+    font-size: small;
+    justify-content: space-around;
     align-items: center;
     font-weight: 600;
     padding: 5px 5px;
