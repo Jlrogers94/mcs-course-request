@@ -42,11 +42,9 @@ main {
     background-color: #29367a;
     cursor: pointer;
 }
-
 .some-button:active{
     background-color: #666;
 }
-
 .course h3{
     background-color: black;
 }
